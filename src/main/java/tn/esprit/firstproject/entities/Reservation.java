@@ -1,15 +1,14 @@
 package tn.esprit.firstproject.entities;
 
-import jakarta.persistence.Entity;
-import jakarta.persistence.GeneratedValue;
-import jakarta.persistence.GenerationType;
-import jakarta.persistence.Id;
+import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
 
 import java.util.Date;
+import java.util.HashSet;
+import java.util.Set;
 
 @Entity
 @Getter
@@ -17,9 +16,14 @@ import java.util.Date;
 @AllArgsConstructor
 @NoArgsConstructor
 public class Reservation {
-    @Id
 
+    @Id
     private String idReservation;
     private Date anneeUniversitaire;
-    private boolean estvalide;
+    private boolean estValide;
+
+    @ManyToMany(mappedBy = "reservations")
+    private Set<Etudiant> etudiants = new HashSet<>();
+
+    // Autres attributs et méthodes de la classe
 }

@@ -8,7 +8,7 @@ import tn.esprit.firstproject.entities.Etudiant;
 
 @Repository
 public interface BlocRepo extends JpaRepository<Bloc, Long> {
-    Bloc findBlocByIdBloc(Long idBloc);
+
 
 
 

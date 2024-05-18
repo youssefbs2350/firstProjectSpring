@@ -6,5 +6,7 @@ import tn.esprit.firstproject.entities.Universite;
 
 @Repository
 
-public interface UniversiteRepo extends JpaRepository<Universite, Long> {
+public interface UniversiteRepo extends
+
+        JpaRepository<Universite, Long> {
 }
